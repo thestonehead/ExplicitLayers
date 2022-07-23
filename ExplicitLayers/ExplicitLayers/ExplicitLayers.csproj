@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageVersion>0.3.17.0</PackageVersion>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+
+    <Authors>TheStonehead</Authors>
+    <PackageLicenseUrl>https://github.com/thestonehead/ExplicitLayers/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/thestonehead/ExplicitLayers</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/thestonehead/ExplicitLayers</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Description>ExplicitLayers is a package that enables you to introduce explicit checks on inter-layer dependencies.</Description>
+    <PackageReleaseNotes>Initial version.</PackageReleaseNotes>
+    <Copyright>Copyright</Copyright>
+    <PackageTags>ExplicitLayers, analyzers</PackageTags>
+
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExplicitLayers.Analyzers\ExplicitLayers.Analyzers.csproj" />
+  </ItemGroup>
+
+  <Target Name="_AddAnalyzersToOutput">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)\ExplicitLayers.Analyzers.dll" PackagePath="analyzers/dotnet/cs" />
+    </ItemGroup>
+  </Target>
+
+</Project>

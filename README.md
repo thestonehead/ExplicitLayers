@@ -78,7 +78,7 @@ The nuget is built for .Net Standard 2.0 so it should work for both .Net Framewo
 
 ### Installation
 
-1. Add a nuget to your project
+1. Add a nuget to your project: [https://www.nuget.org/packages/ExplicitLayers/](https://www.nuget.org/packages/ExplicitLayers/)
 2. Add configuration to your .editorconfig file
 
 ```

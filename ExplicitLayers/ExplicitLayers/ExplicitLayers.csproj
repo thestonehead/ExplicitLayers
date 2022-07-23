@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>0.3.17.0</PackageVersion>
+    <PackageVersion>1.0.0.0</PackageVersion>
     <PreserveCompilationContext>true</PreserveCompilationContext>
 
     <Authors>TheStonehead</Authors>

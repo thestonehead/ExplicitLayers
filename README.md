@@ -83,10 +83,12 @@ The nuget is built for .Net Standard 2.0 so it should work for both .Net Framewo
 1. Add a nuget to your project
 2. Add configuration to your .editorconfig file
 
+```
 dotnet_diagnostic.ExplicitLayers.comma_separated_layer_names = Domain,Infrastructure,Web
 dotnet_diagnostic.ExplicitLayers.Infrastructure.comma_separated_allowed_dependencies = Domain
 dotnet_diagnostic.ExplicitLayers.Web.comma_separated_allowed_dependencies = Domain,Infrastructure
 dotnet_diagnostic.ExplicitLayers.Web.comma_separated_regex_paths = .*Web.*
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -96,8 +98,11 @@ dotnet_diagnostic.ExplicitLayers.Web.comma_separated_regex_paths = .*Web.*
 ## Usage
 
 Add `[Layer("<layer-name>")]` to your classes to specify to which layer they belong.
+
 Add all layer names to .editorconfig config as a comma separated list `dotnet_diagnostic.ExplicitLayers.comma_separated_layer_names` .
+
 Add rules for every layer to .editorconfig as a comma separated list `dotnet_diagnostic.ExplicitLayers.<layer-name>.comma_separated_allowed_dependencies` .
+
 Optionally add rules to .editorconfig to specify all types on a certain path belonging to a certain layer as comma separated list of regex patterns `dotnet_diagnostic.ExplicitLayers.<layer-name>.comma_separated_regex_paths`.
 
 Example of path resolution

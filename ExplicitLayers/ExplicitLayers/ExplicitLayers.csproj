@@ -2,14 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.0.0.1</PackageVersion>
     <PreserveCompilationContext>true</PreserveCompilationContext>
 
     <Authors>TheStonehead</Authors>
-    <PackageLicenseUrl>https://github.com/thestonehead/ExplicitLayers/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/thestonehead/ExplicitLayers</PackageProjectUrl>
     <RepositoryUrl>https://github.com/thestonehead/ExplicitLayers</RepositoryUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Description>ExplicitLayers is a package that enables you to introduce explicit checks on inter-layer dependencies.</Description>
     <PackageReleaseNotes>Initial version.</PackageReleaseNotes>
     <Copyright>Copyright</Copyright>
@@ -17,7 +15,17 @@
 
     <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
     <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+    <PackageIcon>ExplicitLayers.png</PackageIcon>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\ExplicitLayers.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 
   <ItemGroup>
